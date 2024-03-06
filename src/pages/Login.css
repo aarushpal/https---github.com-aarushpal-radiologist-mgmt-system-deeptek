@@ -1,0 +1,141 @@
+.body {
+  margin: 0;
+  padding: 0;
+  /* overflow-y: hidden; */
+}
+
+.login-container {
+  margin: 0 auto;
+  /* width: 95%; */
+  position: relative;
+  /* top: 100px; */
+  padding-bottom: 260px;
+  line-height: 100%;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-container img {
+  scale: 0.8;
+}
+
+.heading p {
+  color: #7f56d9;
+  text-align: center;
+  font-family: GothamBook;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 44px; /* 68.75% */
+  letter-spacing: -1.28px;
+}
+
+.image-content-div {
+  display: flex;
+  width: 80%;
+  height: 60%;
+  gap: 20px;
+  justify-content: space-around;
+
+  align-items: center;
+  border-radius: 10px;
+  border: 5px solid rgba(127, 86, 217, 0.2);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.form-heading {
+  color: #000;
+  text-align: center;
+  font-family: GothamBook;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 135%; /* 32.4px */
+}
+
+/* .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+} */
+
+.content input {
+  height: 30px;
+  width: 395px;
+  border-radius: 10px;
+  border: 2px solid rgba(127, 86, 217);
+  padding-left: 10px;
+}
+
+.content button {
+  height: 30px;
+  width: 395px;
+  background-color: #7f56d9;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-family: GothamBook;
+}
+
+.content a {
+  color: #7f56d9;
+  text-align: center;
+  font-family: GothamBook;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  text-decoration: none;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media screen and (max-width: 1160px) {
+  .heading p {
+    text-align: left;
+
+    font-size: 2rem;
+  }
+  .heading {
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+
+  .image-content-div {
+    flex-direction: column;
+    border: none;
+    border-radius: 10px;
+    background: #fdfdfd;
+    box-shadow: 2px 2px 8px 4px rgba(127, 86, 217, 0.2);
+    width: 95%;
+    padding: 10px 10px;
+  }
+
+  .content form {
+    justify-content: center;
+    align-items: center;
+  }
+  .content button,
+  .content input {
+    width: 80vw;
+  }
+  .login-container img {
+    scale: 0.67;
+  }
+}

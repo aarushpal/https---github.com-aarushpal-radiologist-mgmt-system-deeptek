@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body>
+    <div class="navbar-container">
+      <div class="nav-start">
+        <a class="logo" href="#">
+          <img
+            src="../Navbar/static/logo_top.png"
+            alt="Web"
+            class="logoimg"
+            width="163"
+            height="65"
+            alt="Main Logo"
+          />
+        </a>
+
+        <div class="center">
+          <div class="menu">
+            <ul class="menu-bar">
+              <li>
+                <a class="nav-link" href="#"><p id="Home">Home</p></a>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown1"
+                  aria-expanded="false"
+                >
+                  <p>Courses</p>
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown1" class="dropdown">
+                  <ul>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>IIT-JEE</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"><p>NEET</p></span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Foundation</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown2"
+                  aria-expanded="false"
+                >
+                  <p>Admission</p>
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown2" class="dropdown">
+                  <ul>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Go Fast Scholarship</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Admission Form</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown3"
+                  aria-expanded="false"
+                >
+                  <p>About us</p>
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown3" class="dropdown">
+                  <ul>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>About GOF</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Management</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Success Stories</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>Career at GOF</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  class="nav-link dropdown-btn"
+                  data-dropdown="dropdown4"
+                  aria-expanded="false"
+                >
+                  <p>Resources</p>
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown4" class="dropdown">
+                  <ul>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>PY Exam Papers</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"><p>Blog</p></span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-link" href="#">
+                        <div>
+                          <span class="dropdown-link-title"
+                            ><p>News and Events</p></span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a class="nav-link" href="#"><p id="Contact">Contact</p></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <ul>
+          <li>
+            <img
+              src="../Navbar/static/logo_cart.png"
+              alt="Web"
+              class="cart"
+            /><a href="#"> <p>Cart</p></a>
+          </li>
+          <li>
+            <a href="#"><p>E-store</p></a>
+          </li>
+          <!-- <li>
+            <a href="#"><p>Login</p></a>
+          </li> -->
+          <li>
+            <button
+              class="nav-link dropdown-btn"
+              data-dropdown="dropdown5"
+              aria-expanded="false"
+            >
+              <p>My Account</p>
+              <i class="bx bx-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="dropdown5" class="dropdown">
+              <ul>
+                <li>
+                  <a class="dropdown-link" href="#">
+                    <div>
+                      <span class="dropdown-link-title"><p>Dashboard</p></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-link" href="#">
+                    <div>
+                      <span class="dropdown-link-title"><p>My Course</p></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-link" href="#">
+                    <div>
+                      <span class="dropdown-link-title"><p>Orders</p></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-link" href="#">
+                    <div>
+                      <span class="dropdown-link-title"><p>Logout</p></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button
+        id="hamburger"
+        aria-label="hamburger"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i id="hamburger-icon" class="bx bx-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <script src="./navbar.js"></script>
+  </body>
+</html>

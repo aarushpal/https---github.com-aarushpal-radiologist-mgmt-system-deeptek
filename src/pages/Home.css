@@ -1,0 +1,169 @@
+.home-container {
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: "Lato", sans-serif;
+  color: #202020;
+} */
+
+/* p {
+  display: none;
+} */
+
+.home-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+}
+
+table {
+  /* top: 90px; */
+  /* position: absolute; */
+  width: 95%;
+  border-collapse: collapse;
+  text-align: left;
+  overflow: hidden;
+
+  td,
+  th {
+    border-top: 1px solid #ecf0f1;
+    padding: 10px;
+  }
+
+  td {
+    border-left: 1px solid #ecf0f1;
+    border-right: 1px solid #ecf0f1;
+    margin: 5px;
+  }
+
+  th {
+    background-color: #4ecdc4;
+  }
+
+  tr:nth-of-type(even) td {
+    background-color: lighten(#4ecdc4, 35%);
+  }
+
+  td button {
+    padding: 5px;
+  }
+}
+
+/* Styling for buttons */
+
+.button {
+  font-family: "Open Sans";
+  font-size: 16px;
+  padding: 5px 10px;
+  font-weight: 400;
+  display: inline-block;
+  color: #fff;
+  border-radius: 0.25em;
+  border: none;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.primary {
+  line-height: 40px;
+  transition: ease-in-out 0.2s;
+  /* padding: 0 16px; */
+  padding: 3px 20px;
+}
+.primary:hover,
+.condensed:hover,
+.touch:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 99999px rgba(0, 0, 0, 0.2);
+}
+
+.condensed {
+  transition: ease-in-out 0.2s;
+  line-height: 24px;
+  padding: 0 8px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.touch {
+  transition: ease-in-out 0.2s;
+  line-height: 40px;
+  width: 40px;
+  padding: 0px;
+  text-align: center;
+}
+.edit:before,
+.new:before,
+.delete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 1rem;
+  padding-right: 12px;
+  background: none;
+  color: #fff;
+}
+.condensed.edit:before,
+.condensed.new:before,
+.condensed.delete:before {
+  content: none;
+}
+.touch.edit:before,
+.touch.new:before,
+.touch.delete:before {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.inlineIcon.edit,
+.inlineIcon.new,
+.inlineIcon.delete {
+  background: transparent;
+}
+.inlineIcon.edit:before,
+.inlineIcon.new:before,
+.inlineIcon.delete:before {
+  line-height: 32px;
+  font-size: 32px;
+  padding: 4px 0px;
+}
+.edit {
+  background: #3498db;
+}
+.edit:before {
+  content: "\f040";
+}
+.inlineIcon.edit:before {
+  color: #3498db;
+}
+
+.new {
+  background: #2ecc71;
+}
+.new:before {
+  content: "\f067";
+}
+.inlineIcon.new:before {
+  color: #2ecc71;
+}
+.cancel {
+  background: #555;
+}
+.cancel:before {
+  content: "\f05e";
+}
+.inlineIcon.cancel:before {
+  color: #555;
+}
+.delete {
+  background: #c0392b;
+}
+.delete:before {
+  content: "\f1f8";
+}
+.inlineIcon.delete:before {
+  color: #c0392b;
+}
+
+td button {
+  padding: 5px;
+  margin-right: 15px; /* Add margin to create space between buttons */
+}

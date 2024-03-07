@@ -1,0 +1,89 @@
+/* .add-radiologist-modal {
+ 
+  width: 100%;
+  position: relative;
+  top: 150px;
+  padding-bottom: 260px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+} */
+/* 
+.add-radiologist-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #7f56d9;
+  margin-bottom: 60px;
+} */
+
+.add-radiologist-modal p {
+  color: #ffffff;
+  text-align: center;
+  font-family: GothamBook;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 44px;
+  letter-spacing: -1.28px;
+  margin-bottom: 10px;
+}
+
+.add-radiologist-modal h2 {
+  color: #ffffff;
+}
+
+/* .add-radiologist-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 98vw;
+} */
+
+/* .add-radiologist-modal {
+  background: gray;
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40vw;
+}
+
+.add-radiologist-modal input,
+.add-radiologist-modal select {
+  height: 45px;
+  /* width: 29vw; */
+  border-radius: 10px;
+  border: 2px solid #be8a60;
+  padding-left: 10px;
+}
+
+.add-radiologist-modal button {
+  height: 45px;
+  /* width: 100px; */
+  background-color: #be8a60;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  padding: 24px 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+/* .add-radiologist-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 5px solid rgba(127, 86, 217, 0.2);
+  border-radius: 5px;
+  width: 40vw;
+  padding: 40px 0;
+} */

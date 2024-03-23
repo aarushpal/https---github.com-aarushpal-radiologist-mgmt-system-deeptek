@@ -1,11 +1,12 @@
 import "./Register.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { SignupValidation } from "../validation/SignupValidation";
 import RegisterImage from "../static/login-image.png";
 import { Link, useNavigate } from "react-router-dom";
 
 import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -16,22 +17,50 @@ export const Register = () => {
     password: "",
     role: "USER",
   });
+  const [errors, setErrors] = useState({});
+  // const [submitButtonDisabled, setSubmitButtonDisabled] = useState(true);
+
+  // const handleInput = (event) => {
+  //   const newObj = { ...values, [event.target.name]: event.target.value };
+  //   setValues(newObj);
+  // };
+
+  const handleValidation = (event) => {
+    event.preventDefault();
+    setErrors(SignupValidation(values));
+  };
+
+  // useEffect(() => {
+  //   setErrors(SignupValidation(values));
+  // }, [values]);
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
 
-    try {
-      const response = await axios.post(
-        "http://localhost:6060/auth/signup",
-        values
-      );
+    handleValidation(event);
+    if (
+      Object.keys(errors).length === 0 &&
+      values.email &&
+      values.password &&
+      values.name
+    ) {
+      try {
+        console.log("Errors", errors);
+        const response = await axios.post(
+          "http://localhost:6060/auth/signup",
+          values
+        );
 
-      console.log("Response from backend:", response.data);
+        console.log("Response from backend:", response.data);
 
-      navigate("/login");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      console.log(values);
+        navigate("/login");
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        console.log(values);
+      }
+    } else {
+      console.log(errors, values);
+      return;
     }
   };
 
@@ -40,51 +69,78 @@ export const Register = () => {
       <Navbar />
       <div className="register-container">
         <div className="heading">
-          <p>Register</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="130"
-            height="4"
-            viewBox="0 0 130 4"
-            fill="none"
-          >
-            <path
-              d="M2 2H130"
-              stroke="#FF9B26"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-          </svg>
+          <p>Sign Up</p>
         </div>
         <div className="image-content-div">
           <div className="image">
             <img src={RegisterImage} alt="" />
           </div>
           <div className="content">
-            <form onSubmit={handleSubmit}>
+            <form>
+              <div className="fields-div name-fields-div">
+                <div className="label-div">
+                  <label htmlFor="name">Name</label>
+                </div>
+
+                {errors.name && (
+                  <div className="error-div">
+                    <label style={{ color: "red" }}>{errors.name}</label>
+                  </div>
+                )}
+              </div>
               <input
                 type="text"
                 placeholder="Enter Name"
-                required
                 id="Name"
                 onChange={(event) =>
-                  setValues((prev) => ({ ...prev, name: event.target.value }))
-                }
-              />
-              <input
-                type="email"
-                placeholder="Enter Email"
-                required
-                id="Email"
-                onChange={(event) =>
-                  setValues((prev) => ({ ...prev, email: event.target.value }))
+                  setValues((prev) => ({
+                    ...prev,
+                    name: event.target.value,
+                  }))
                 }
               />
 
+              <div className="fields-div">
+                <div className="label-div">
+                  <label htmlFor="email">Email</label>
+                </div>
+
+                {errors.email && (
+                  <div className="error-div">
+                    <label style={{ color: "red", lineHeight: "0%" }}>
+                      {errors.email}
+                    </label>
+                  </div>
+                )}
+              </div>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                id="Email"
+                onChange={(event) =>
+                  setValues((prev) => ({
+                    ...prev,
+                    email: event.target.value,
+                  }))
+                }
+              />
+
+              <div className="fields-div">
+                <div className="label-div">
+                  <label htmlFor="password">Password</label>
+                </div>
+
+                {errors.password && (
+                  <div className="error-div">
+                    <label style={{ color: "red", lineHeight: "80%" }}>
+                      {errors.password}
+                    </label>
+                  </div>
+                )}
+              </div>
               <input
                 type="password"
                 placeholder="Enter Password"
-                required
                 onChange={(event) =>
                   setValues((prev) => ({
                     ...prev,
@@ -92,32 +148,24 @@ export const Register = () => {
                   }))
                 }
               />
-              {/* <div className="error-msg">
-                <b>{errorMsg}</b>
-              </div> */}
 
-              <select
-                id="role"
-                onChange={(event) =>
-                  setValues((prev) => ({ ...prev, role: event.target.value }))
-                }
-              >
-                <option value="USER">USER</option>
-                <option value="ADMIN">ADMIN</option>
-              </select>
               <button
                 type="submit"
-                // onClick={handleSubmission}
+                onClick={handleSubmit}
+                // disabled={submitButtonDisabled}
                 // disabled={submitButtonDisabled}
               >
                 Submit
               </button>
             </form>
 
-            <Link to="/login">Already have an account?</Link>
+            <Link to="/login" style={{ marginBottom: "20px" }}>
+              Already have an account?
+            </Link>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

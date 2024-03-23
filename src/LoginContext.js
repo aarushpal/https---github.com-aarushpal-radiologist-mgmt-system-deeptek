@@ -6,7 +6,9 @@ export const LoginContext = createContext();
 
 // Create the provider component
 export const LoginProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const token = localStorage.getItem("token");
+
+  const [isLoggedIn, setIsLoggedIn] = useState(token ? true : false);
 
   return (
     <LoginContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>

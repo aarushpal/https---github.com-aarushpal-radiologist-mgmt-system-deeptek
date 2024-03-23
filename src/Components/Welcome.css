@@ -1,0 +1,12 @@
+.welcome-container {
+  height: 285px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-container p {
+  font-size: 3rem;
+  color: white;
+  font-weight: 500;
+}

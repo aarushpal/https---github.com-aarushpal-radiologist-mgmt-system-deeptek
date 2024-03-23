@@ -2,9 +2,15 @@
   /* top: 200px; */
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   /* width: 100vw; */
   margin: 20px 0;
+}
+.features-inner-container {
+  display: flex;
+  align-items: end;
+  width: 95%;
+  justify-content: space-between;
 }
 
 .admin-action-div-buttons {
@@ -171,7 +177,8 @@ button {
   position: fixed;
   top: 50%;
   left: 50%;
-  background: #548687;
+  background: #31363f;
+
   color: #000000;
   padding: 48px 40px;
 
@@ -180,7 +187,7 @@ button {
   scale: 1;
   opacity: 0;
   visibility: hidden;
-  z-index: 1;
+  z-index: 200;
 }
 
 .open-modal > .main-container {
@@ -201,6 +208,53 @@ h2 {
 
 p {
   margin: 0;
+}
+
+.filter-div form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.filter-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-items input {
+  width: 170px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 6px;
+}
+
+#search-button {
+  background-color: #76abae;
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 20px;
+  height: 35px;
+  align-self: end;
+}
+
+#clear-button {
+  background-color: #76abae;
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 20px;
+  height: 35px;
+  align-self: end;
+}
+
+.main-container button {
+  padding: 0px 15px;
+  height: 35px;
 }
 
 @keyframes modal-window-in {

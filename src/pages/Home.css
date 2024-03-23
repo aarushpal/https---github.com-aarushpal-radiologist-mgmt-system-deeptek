@@ -1,5 +1,13 @@
+body {
+  background-color: #31363f !important;
+}
+
 .home-container {
   box-sizing: border-box;
+  background-color: #31363f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* body {
@@ -11,17 +19,17 @@
   display: none;
 } */
 
-.home-container {
+/* .home-container {
   display: flex;
-  /* align-items: center; */
+ 
   justify-content: center;
   position: relative;
-}
+} */
 
 table {
   /* top: 90px; */
   /* position: absolute; */
-  width: 95%;
+  width: 94vw;
   border-collapse: collapse;
   text-align: left;
   overflow: hidden;
@@ -29,17 +37,23 @@ table {
   td,
   th {
     border-top: 1px solid #ecf0f1;
-    padding: 10px;
+    padding: 7px 10px;
   }
 
   td {
     border-left: 1px solid #ecf0f1;
     border-right: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
     margin: 5px;
+    color: #fff;
   }
 
   th {
-    background-color: #4ecdc4;
+    background-color: #2d4356;
+    border-left: 1px solid #ecf0f1;
+    border-right: 1px solid #ecf0f1;
+    color: white;
+    height: 8px;
   }
 
   tr:nth-of-type(even) td {
@@ -396,10 +410,98 @@ p {
 
 .table-headers button {
   border: none;
-  background-color: #4ecdc4;
+  background-color: #76abae65;
 }
 
 .button-padding {
   margin: 0;
   padding: 0;
+}
+
+ul.pagination.pagination-md {
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.namelink {
+  text-decoration: none;
+  font-size: 1rem;
+  color: aqua;
+}
+
+.actions-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sort-buttons {
+  display: flex;
+  flex-direction: column;
+  scale: 0.7;
+}
+
+.sort-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.entries-per-page {
+  align-self: flex-start;
+  /* margin-left: 31px;
+  margin-bottom: 5px; */
+  display: flex;
+  margin-top: 20px;
+  gap: 7px;
+}
+
+.entries-per-page select {
+  height: 38px;
+  border-radius: 5px;
+  border: none;
+}
+
+.entries-per-page-heading p {
+  font-weight: 500;
+  color: white;
+  padding-top: 6px;
+}
+
+.delete-modal-window h2,
+.delete-modal-window h4,
+.delete-modal-window p {
+  color: white;
+}
+
+#delete-modal-yes-button {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #f7412c;
+  padding: 5px 25px;
+}
+
+#delete-modal-cancel-button {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #76abae;
+  padding: 5px 15px;
+}
+
+.yes-cancel-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center {
+  display: flex;
+  justify-content: end;
+  /* align-items: end; */
+  gap: 5px;
 }

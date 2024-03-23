@@ -20,13 +20,14 @@
 
 .add-radiologist-modal p {
   color: #ffffff;
-  text-align: center;
+  text-align: left !important;
   font-family: GothamBook;
-  font-size: 2.75rem;
+  font-size: 1rem !important;
   font-style: normal;
-  font-weight: 900;
-  line-height: 44px;
+  font-weight: 400 !important;
+  line-height: 0% !important;
   letter-spacing: -1.28px;
+
   margin-bottom: 10px;
 }
 
@@ -46,24 +47,25 @@
   background: gray;
 } */
 
-form {
+.add-radiologist-modal form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
   width: 40vw;
 }
 
 .add-radiologist-modal input,
 .add-radiologist-modal select {
-  height: 45px;
+  height: 35px !important;
   /* width: 29vw; */
   border-radius: 10px;
   border: 2px solid #be8a60;
   padding-left: 10px;
+  line-height: 0% !important;
 }
 
 .add-radiologist-modal button {
-  height: 45px;
+  height: 35px !important;
   /* width: 100px; */
   background-color: #be8a60;
   color: white;
@@ -87,3 +89,35 @@ form {
   width: 40vw;
   padding: 40px 0;
 } */
+
+.submit-cancel-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.add-radiologist-modal label {
+  text-align: left;
+}
+
+#submit-button {
+  background-color: #76abae;
+  color: black;
+  font-weight: 500;
+}
+
+#cancel-button {
+  background-color: #f7412c;
+  color: black;
+  font-weight: 500;
+}
+
+.react-tel-input .form-control {
+  width: 545px !important;
+}
+
+.fields-div {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Navbar.css";
-
+import Logo from "./static/logo.png";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../LoginContext";
 import { toast } from "react-toastify";
@@ -8,18 +8,6 @@ import { toast } from "react-toastify";
 const Navbar = () => {
   let navigate = useNavigate();
   const { isLoggedIn, setIsLoggedIn } = useContext(LoginContext);
-
-  // const [login, setLogin] = useState(false);
-  // useEffect(() => {
-  //   setLogin(isLoggedIn());
-  // }, [login]);
-
-  // const logout = () => {
-  //   doLogout(() => {
-  //     setLogin(false);
-  //     navigate("/");
-  //   });
-  // };
 
   const doLogout = () => {
     try {
@@ -33,30 +21,57 @@ const Navbar = () => {
     }
   };
 
+  const handleAboutClick = () => {
+    navigate("/about");
+  };
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
+  const handleHomeClick = () => {
+    if (isLoggedIn) {
+      navigate("/home");
+    } else {
+      navigate("/login");
+      toast.info("Please login first");
+    }
+  };
+
   return (
     <div className="navbar-container">
       <div className="navbar-left">
-        <p>
-          DEEP<span className="tek">TEK</span>
-        </p>
+        <img
+          src={Logo}
+          alt=""
+          onClick={() => {
+            navigate("/");
+          }}
+        />
       </div>
       {/* <div className="navbar-left-content"></div>
         </div> */}
       <div className="navbar-mid">
         <div className="home-div">
-          <a href="#home">Home</a>
+          <a href="#" onClick={handleHomeClick}>
+            Home
+          </a>
         </div>
         <div className="about-div">
-          <a href="#About">About</a>
+          <a href="#" onClick={handleAboutClick}>
+            About
+          </a>
         </div>
         <div className="contact-div">
-          <a href="#Contact Us">Contact Us</a>
+          <a href="#" onClick={handleContactClick}>
+            Contact Us
+          </a>
         </div>
       </div>
       <div className="navbar-right">
         {isLoggedIn && (
           <div className="login">
-            <button class="login-button" onClick={doLogout}>
+            <button className="login-button" onClick={doLogout}>
               Logout
             </button>
           </div>

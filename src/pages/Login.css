@@ -1,3 +1,4 @@
+@import url("../fonts.css");
 .body {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
   /* width: 95%; */
   position: relative;
   /* top: 100px; */
-  padding-bottom: 260px;
+  /* padding-bottom: 260px; */
   line-height: 100%;
   text-align: justify;
   display: flex;
@@ -17,6 +18,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  margin-top: 10px;
 }
 
 .login-container img {
@@ -24,12 +26,12 @@
 }
 
 .heading p {
-  color: #7f56d9;
+  color: #76abae;
   text-align: center;
-  font-family: GothamBook;
+  font-family: GothamBold;
   font-size: 2.25rem;
   font-style: normal;
-  font-weight: 800;
+  /* font-weight: 800; */
   line-height: 44px; /* 68.75% */
   letter-spacing: -1.28px;
 }
@@ -37,13 +39,13 @@
 .image-content-div {
   display: flex;
   width: 80%;
-  height: 60%;
+  height: 40%;
   gap: 20px;
   justify-content: space-around;
 
   align-items: center;
   border-radius: 10px;
-  border: 5px solid rgba(127, 86, 217, 0.2);
+  border: 5px solid #76abae;
 }
 
 .content {
@@ -71,26 +73,32 @@
   align-items: center;
 } */
 
-.content input {
-  height: 30px;
+.content input,
+.content select {
+  height: 40px;
   width: 395px;
   border-radius: 10px;
-  border: 2px solid rgba(127, 86, 217);
+  border: 2px solid #76abae;
   padding-left: 10px;
+  background-color: #808080;
+}
+
+.content input::placeholder {
+  color: whitesmoke;
 }
 
 .content button {
-  height: 30px;
+  height: 40px;
   width: 395px;
-  background-color: #7f56d9;
-  color: white;
+  background-color: #76abae;
+  color: black;
   border-radius: 10px;
   border: none;
   font-family: GothamBook;
 }
 
 .content a {
-  color: #7f56d9;
+  color: #76abae;
   text-align: center;
   font-family: GothamBook;
   font-size: 1rem;
@@ -106,7 +114,26 @@
   gap: 5px;
 }
 
-@media screen and (max-width: 1160px) {
+.login-container a {
+  margin-right: 130px;
+}
+
+.fields-div {
+  display: flex;
+  /* align-items: end; */
+  gap: 20px;
+  /* line-height: 0%; */
+}
+
+.error-div {
+  align-self: center;
+}
+
+.error-div label {
+  font-weight: 400;
+}
+
+/* @media screen and (max-width: 1160px) {
   .heading p {
     text-align: left;
 
@@ -138,4 +165,4 @@
   .login-container img {
     scale: 0.67;
   }
-}
+} */

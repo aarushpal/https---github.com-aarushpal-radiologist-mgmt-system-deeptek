@@ -32,7 +32,6 @@
 
 .add-radiologist-modal h2 {
   color: #ffffff;
-  text-align: center;
 }
 
 /* .add-radiologist-modal {
@@ -88,3 +87,24 @@ form {
   width: 40vw;
   padding: 40px 0;
 } */
+
+.Upload-File-Button button {
+  border: none;
+  background-color: #76abae;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.upload-dicom-heading {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+}
+
+.modalContainerUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
